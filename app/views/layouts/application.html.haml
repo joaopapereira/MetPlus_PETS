@@ -26,6 +26,7 @@
     = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.7/moment-timezone-with-data.min.js'
     = favicon_link_tag 'PETS_Logo.png'
   %body
+    = analytics_init if GoogleAnalytics.valid_tracker?
     %a{:href => '#top'}
     = render partial: 'layouts/menu'
     %div{:class => 'content container'}

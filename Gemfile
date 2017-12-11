@@ -60,6 +60,8 @@ gem 'js_cookie_rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'google-analytics-rails'
+
 gem 'active_record-acts_as'
 
 gem 'delayed_job_active_record'
