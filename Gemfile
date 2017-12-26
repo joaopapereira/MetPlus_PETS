@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 
-
-
 ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-#gem 'rails', '4.2.0'
+# gem 'rails', '4.2.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -20,7 +18,8 @@ gem 'haml'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Turbolinks makes following links in your web application faster.
+# Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 gem 'jquery-turbolinks'
@@ -40,19 +39,19 @@ gem 'devise_invitable', '~> 1.5.2'
 
 gem 'figaro'
 
-gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'will_paginate'
 
 # gem 'ajax_pagination'
 
 ## Authorization gem
-gem "pundit"
+gem 'pundit'
 
 gem 'pusher'
 
 gem 'js_cookie_rails'
 
-# gem 'nokogiri', '~> 1.6', '>= 1.6.7'
+gem 'nokogiri', '~> 1.8.1'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -72,22 +71,21 @@ gem 'pg'
 
 # later we can strict the faker
 # to staging && development
-gem 'ffaker'
 gem 'faker'
+gem 'ffaker'
 
 gem 'ransack'
 
 gem 'mailgun_rails'
 
 group :development do
-  gem 'haml-rails'
   gem 'bullet'
+  gem 'haml-rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
-
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -97,7 +95,8 @@ group :development, :test do
   # Factory girl to add factories
   gem 'factory_girl_rails', '~> 4.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
   gem 'spring'
 
   gem 'jasmine'
@@ -105,20 +104,21 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', :require => false
-  gem 'database_cleaner'
-  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers', require: false
-  gem 'email_spec'
-  gem 'poltergeist'
   gem 'codeclimate-test-reporter'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'email_spec'
   gem 'launchy'
+  gem 'poltergeist'
   gem 'selenium-webdriver' # Enables running cuke tests with browser (see env.rb)
+  gem 'shoulda-matchers',
+      git: 'https://github.com/thoughtbot/shoulda-matchers', require: false
+  gem 'simplecov', require: false
   gem 'webmock'
-  gem 'simplecov', :require => false
 end
 
 gem 'airbrake', '~> 5.4'
 group :production do
-  gem 'rails_12factor'
   gem 'puma'
+  gem 'rails_12factor'
 end
